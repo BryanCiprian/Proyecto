@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+
+<mapper namespace="org.itskill.mapper.ContactoMapper">
+    
+ 
+ <select id="save" resultType="Integer" parameterType="ContactoBean">
+       select spi_tbl02_contacto(#{idPersona} ,#{telFijo1}, #{telFijo2}, #{telFijo3}, #{telCel1}, #{telCel2}, #{telCel3}, #{correo1} , #{correo2}, #{correo3} , #{usuarioBean.var_usuario}, '1');
+
+    </select>
+    
+</mapper>
+  

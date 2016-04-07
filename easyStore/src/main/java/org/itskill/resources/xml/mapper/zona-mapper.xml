@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.itskill.mapper.ZonaMapper">
+
+ <resultMap id="zonaMap" type="ZonaBean">
+        <id column="idZona" property="id_zona"></id>
+        <result column="desZona" property="des_zona"></result>
+        <association property="distritoBean" javaType="DistritoBean">
+            <id column="idDistrito" property="id_distrito"></id>            
+            <result column="desDistrito" property="desc_distrito"></result>
+        </association>
+   </resultMap>
+
+
+ <select id="listarZonaPorIdDistrito" resultType="ZonaBean" parameterType="DistritoBean">
+	  select id_zona as idZona ,  
+	  des_zona as desZona
+	  from tbl36_zona where id_distrito= #{idDistrito} order by 2;
+ </select>
+
+<!--   <select id="listarZonaPorIdDistrito" resultType="ZonaBean" parameterType="DistritoBean">
+	    SELECT id_zona as idZona, des_Zona as nomZona
+        FROM tbl15_zona  order by 2;
+ 	</select>-->
+ 	     
+</mapper>

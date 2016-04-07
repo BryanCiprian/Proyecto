@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+
+<mapper namespace="org.itskill.mapper.PersonaMapper">
+    
+ 
+    <!--<resultMap id="personaMap" type="PersonaBean">
+        <id column="idMarca" property="id_marca"></id>
+        <result column="id_persona" property="id_persona"></result>
+        <result column="des_nombre" property="des_nombre"></result>
+        <result column="ape_paterno" property="ape_paterno"></result>
+        <result column="ape_materno" property="ape_materno"></result>
+        <result column="dni" property="dni"></result>
+        <result column="direccion" property="des_direccion"></result>
+        <result column="telefono" property="telefono"></result>
+        <result column="celular" property="celular"></result>
+        <result column="correo" property="correo"></result>
+        <association property="tipoPersonaBean" javaType="TipoPersonaBean">
+            <id column="idTipoPersona" property="id_tipo_persona"></id>            
+            <result column="descTipoPersona" property="desc_tipo_persona"></result>
+        </association>
+        <association property="zonaBean" javaType="ZonaBean">
+            <id column="idZona" property="id_zona"></id>            
+            <result column="nomZona" property="des_zona"></result>
+        </association>  
+        <association property="cargoBean" javaType="CargoBean">
+            <id column="idCargo" property="id_cargo"></id>            
+            <result column="descCargo" property="des_cargo"></result>
+        </association>     
+    </resultMap>
+    
+    <select id="save" resultType="Integer" parameterType="PersonaBean">
+        SELECT spi_tbl03_persona ( #{descNombre},  #{apePaterno}, #{apeMaterno}, 
+        #{dni} , #{zonaBean.idZona} , #{direccion},#{telefono}, #{celular},#{correo} ,
+        #{tipoPersonaBean.idTipoPersona}, #{cargoBean.idCargo});
+    </select>-->
+ 
+     <select id="save" resultType="Integer" parameterType="PersonaBean">
+        SELECT spi_tbl03_persona_prueba (#{zonaBean.idZona} , #{descNombre},  #{apePaterno}, #{apeMaterno}, 
+        #{inventarioDocumentoBean.id_doc_inventario} , #{numDocumento}, #{fecNacimiento}, #{desDireccion},#{usuarioBean.var_usuario});
+    </select>
+    
+</mapper>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.itskill.mapper.ProvinciaMapper">
+  <resultMap id="provinciaMap" type="ProvinciaBean">
+        <id column="idProvincia" property="id_provincia"></id>
+        <result column="codProvincia" property="cod_provincia"></result>
+        <result column="desProvincia" property="des_provincia"></result>
+        <association property="departamentoBean" javaType="DepartamentoBean">
+            <id column="idDepartamento" property="id_departamento"></id>            
+            <result column="desDepartamento" property="des_departamento"></result>
+        </association>
+   </resultMap>
+
+ <select id="listarProvinciaPorIdDepartamento" resultType="ProvinciaBean" parameterType="DepartamentoBean">
+	  select id_provincia as idProvincia , 
+	  cod_provincia as codProvincia , 
+	  des_provincia as desProvincia
+	  from tbl34_provincia where id_departamento= #{idDepartamento} order by 3;
+ 	</select>
+ 	     
+</mapper>

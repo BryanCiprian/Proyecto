@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.itskill.mapper.ConfiguracionMapper">
+	<select id="save" resultType="Integer" parameterType="ConfiguracionBean">
+		select
+		spi_tbl38_configuracion(
+		#{ruc_empresa},
+		#{nom_empresa},
+		#{dir_empresa},
+		#{url_logo_empresa},
+		#{pos_header},
+		#{pos_menu},
+		#{pos_footer},
+		#{tipo_navegacion},
+		#{tipo_diseno},
+		#{color_base},
+		#{color_alterno},
+		#{act_economica},
+		#{cod_act_economica},
+		#{mon_sol},
+		#{mon_dolar},
+		#{flag_bimoneda},
+		#{id_tipo_impresora},
+		#{id_estado},
+		#{doc_emision},
+		#{usu_crea},
+		#{idioma});
+	</select>
+
+	<select id="edit" resultType="Integer" parameterType="ConfiguracionBean">
+		select
+		spu_tbl38_configuracion(#{id_config},
+		#{ruc_empresa},
+		#{nom_empresa},
+		#{dir_empresa},
+		#{url_logo_empresa},
+		#{pos_header},
+		#{pos_menu},
+		#{pos_footer},
+		#{tipo_navegacion},
+		#{tipo_diseno},
+		#{color_base},
+		#{color_alterno},
+		#{act_economica},
+		#{cod_act_economica},
+		#{mon_sol},
+		#{mon_dolar},
+		#{flag_bimoneda},
+		#{id_tipo_impresora},
+		#{id_estado},
+		#{doc_emision},
+		#{usu_crea},
+		#{idioma} );
+	</select>
+
+	<select id="listarConfig" resultType="ConfiguracionBean"
+		parameterType="ConfiguracionBean">
+		select * from tbl38_configuracion;
+	</select>
+</mapper>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="org.itskill.mapper.ClaseMapper">
+
+
+
+	<resultMap id="claseMap" type="Clase">
+		<id column="id_clase" property="id_clase"></id>
+		<result column="des_clase" property="des_clase"></result>
+		<result column="nat_clase" property="nat_clase"></result>
+		<result column="fec_crea" property="fec_crea"></result>
+		<result column="fec_eli" property="fec_eli"></result>
+		<result column="fec_mod" property="fec_mod"></result>
+		<result column="estado" property="estado"></result>
+		<association property="usu_crea" javaType="Usuario">
+			<id column="id_persona" property="id_persona"></id>
+			<result column="des_usuario" property="var_usuario"></result>
+			<result column="des_clave" property="var_clave"></result>
+		</association>
+		<association property="usu_mod" javaType="Usuario">
+			<id column="id_persona" property="id_persona"></id>
+			<result column="des_usuario" property="var_usuario"></result>
+			<result column="des_clave" property="var_clave"></result>
+		</association>
+		<association property="usu_eli" javaType="Usuario">
+			<id column="id_persona" property="id_persona"></id>
+			<result column="des_usuario" property="var_usuario"></result>
+			<result column="des_clave" property="var_clave"></result>
+		</association>
+	</resultMap>
+	<select id="getAll" resultMap="claseMap">
+		select * from
+		tbl20_clase_plan_contable;
+	</select>
+</mapper>

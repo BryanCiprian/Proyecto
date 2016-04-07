@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="org.itskill.mapper.UsuarioMapper">
+
+
+
+	<resultMap id="usuarioMap" type="Usuario">
+		<result column="estado" property="id_estado"></result>
+		<result column="des_usuario" property="var_usuario"></result>
+		<result column="des_clave" property="var_clave"></result>
+		<result column="fec_crea" property="tms_fechacreacion"></result>
+		<result column="fec_mod" property="tms_fechamodif"></result>
+
+		<result column="fec_eli" property="fec_eli"></result>
+		<result column="fec_inicio" property="fec_inicio"></result>
+		<result column="fec_fin" property="fec_fin"></result>
+
+		<result column="nombres" property="nombres"></result>
+
+		<association property="personaBean" javaType="PersonaBean">
+			<id column="id_persona" property="idPersona"></id>
+			<result column="des_nombre" property="descNombre"></result>
+			<result column="ape_paterno" property="apePaterno"></result>
+			<result column="ape_materno" property="apeMaterno"></result>
+		</association>
+	</resultMap>
+
+
+
+
+
+	<select id="findByName" resultMap="usuarioMap">
+		SELECT
+		u.id_persona,
+		u.estado,
+		u.des_usuario, u.des_clave,
+		p.des_nombre,
+		p.ape_paterno, p.ape_materno
+		, p.des_nombre||' '|| p.ape_paterno ||'
+		'|| p.ape_materno as nombres
+		FROM tbl07_usuario u
+		inner join
+		tbl03_persona p
+		ON u.id_persona =
+		p.id_persona
+		WHERE
+		u.des_usuario=#{pvar_usu_usuario}
+		and u.estado='1';
+	</select>
+
+	<select id="getAll" resultMap="usuarioMap">
+		select u.*,
+		p.des_nombre,
+		p.ape_paterno, p.ape_materno
+		, p.des_nombre||' '||
+		p.ape_paterno ||'
+		'||
+		p.ape_materno as nombres
+		FROM tbl07_usuario u
+		inner join tbl03_persona p
+		ON u.id_persona =
+		p.id_persona where u.estado='1'
+	</select>
+
+	<select id="getAllPersona" resultType="PersonaBean">
+		select id_persona as
+		idPersona , des_nombre as descNombre, ape_paterno as apePaterno
+		,ape_materno as apeMaterno from tbl03_persona where estado='1' and
+		id_persona not in (select id_persona from tbl07_usuario)
+	</select>
+
+
+	<select id="findById" parameterType="Integer" resultMap="usuarioMap">
+		SELECT
+		u.id_persona,u.des_usuario,u.des_clave,u.estado,to_char(u.fec_inicio,
+		'dd/mm/yyyy') as fec_inicio,to_char(u.fec_fin, 'dd/mm/yyyy') as
+		fec_fin,
+		p.des_nombre, p.ape_paterno, p.ape_materno
+		, p.des_nombre||'
+		'||
+		p.ape_paterno ||'
+		'|| p.ape_materno as nombres
+		FROM tbl07_usuario u
+		inner join tbl03_persona p
+		ON u.id_persona =
+		p.id_persona
+		WHERE
+		u.id_persona=#{id_persona} and u.estado='1';
+	</select>
+
+	<select id="save" resultType="Integer" parameterType="Usuario">
+		select
+		spi_tbl07_usuario(
+		#{personaBean.idPersona},
+		#{var_clave},
+		#{var_usuario},
+		#{fec_inicio},
+		#{fec_fin}
+
+		);
+	</select>
+	<select id="edit" resultType="Integer" parameterType="Usuario">
+		select
+		spu_tbl07_usuario(
+		#{personaBean.idPersona},
+		#{var_clave},
+		#{var_usuario},
+		#{fec_inicio},
+		#{fec_fin}
+		);
+	</select>
+	<select id="delete" resultType="Integer" parameterType="Integer">
+		select
+		spd_tbl07_usuario(#{idPersona});
+	</select>
+
+
+
+
+
+
+</mapper>

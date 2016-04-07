@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.itskill.mapper.ProveedorMapper">
+
+    <!--   <resultMap id="proveedorMap" type="ProveedorBean">
+        <id column="idProveedor" property="id_proveedor"></id>
+        <result column="codigo" property="codigo"></result>
+        <result column="nomRazSoc" property="nom_raz_soc"></result>
+        <result column="nomCom" property="nom_com"></result>
+        <result column="pagWebProv" property="pag_web_prov"></result>
+        <result column="idEstado" property="id_estado"></result>   
+        <association property="usuarioBean" javaType="Usuario">
+            <id column="id_usuario" property="id_usuario"></id>            
+            <result column="var_usuario" property="var_usuario"></result>
+            <result column="var_clave" property="var_clave"></result>
+        </association>     
+    </resultMap>-->
+
+    
+ 	 
+    <select id="save" resultType="Integer" parameterType="ProveedorBean">       
+        SELECT spi_tbl05_proveedor (#{idPersona}, #{numRuc}, #{nomCom}, #{nomRazSo}, #{urlWeb}, '1', #{usuarioBean.var_usuario})        
+  
+    </select>
+   
+</mapper>

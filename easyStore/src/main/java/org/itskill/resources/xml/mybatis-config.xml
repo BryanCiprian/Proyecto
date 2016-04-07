@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.1//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<typeAliases>
+		<typeAlias alias="Usuario" type="org.itskill.bean.UsuarioBean"></typeAlias>
+		<typeAlias alias="Vista" type="org.itskill.bean.VistaBean"></typeAlias>
+		<typeAlias alias="Menu" type="org.itskill.bean.MenuBean"></typeAlias>
+		<typeAlias alias="ConfiguracionBean" type="org.itskill.bean.ConfiguracionBean"></typeAlias>
+		<typeAlias alias="Articulo" type="org.itskill.bean.ArticuloBean"></typeAlias>
+		<typeAlias alias="InventarioDocumento" type="org.itskill.bean.InventarioDocumentoBean"></typeAlias>
+		<typeAlias alias="Estado" type="org.itskill.bean.EstadoBean"></typeAlias>
+		<typeAlias alias="Clase" type="org.itskill.bean.ClasePlanContableBean"></typeAlias>
+		<typeAlias alias="Grupo" type="org.itskill.bean.GrupoPlanContableBean"></typeAlias>
+		<typeAlias alias="Cuenta" type="org.itskill.bean.CuentaPlanContableBean"></typeAlias>
+		<typeAlias alias="SubCuenta" type="org.itskill.bean.SubCuentaPlanContableBean"></typeAlias>
+		<typeAlias alias="Procedencia" type="org.itskill.bean.ProcedenciaBean"></typeAlias>
+		<typeAlias alias="TipoCambio" type="org.itskill.bean.TipoCambioBean"></typeAlias>
+		<typeAlias alias="MarcaBean" type="org.itskill.bean.MarcaBean"></typeAlias>
+		<typeAlias alias="ProveedorBean" type="org.itskill.bean.ProveedorBean"></typeAlias>
+		<typeAlias alias="PersonaBean" type="org.itskill.bean.PersonaBean"></typeAlias>
+		<typeAlias alias="ZonaBean" type="org.itskill.bean.ZonaBean"></typeAlias>
+		<typeAlias alias="CargoBean" type="org.itskill.bean.CargoBean"></typeAlias>
+		<typeAlias alias="TipoPersonaBean" type="org.itskill.bean.TipoPersonaBean"></typeAlias>
+		<typeAlias alias="AlmacenBean" type="org.itskill.bean.AlmacenBean"></typeAlias>
+		<typeAlias alias="Banco" type="org.itskill.bean.BancoBean"></typeAlias>
+		<typeAlias alias="Igv" type="org.itskill.bean.IgvBean"></typeAlias>
+		<typeAlias alias="Categoria" type="org.itskill.bean.CategoriaBean"></typeAlias>
+		<typeAlias alias="DepartamentoBean" type="org.itskill.bean.DepartamentoBean"></typeAlias>
+		<typeAlias alias="ProvinciaBean" type="org.itskill.bean.ProvinciaBean"></typeAlias>
+		<typeAlias alias="DistritoBean" type="org.itskill.bean.DistritoBean"></typeAlias>
+		<typeAlias alias="TipoClienteBean" type="org.itskill.bean.TipoClienteBean"></typeAlias>
+		<typeAlias alias="ClienteBean" type="org.itskill.bean.ClienteBean"></typeAlias>
+		<typeAlias alias="ContactoBean" type="org.itskill.bean.ContactoBean"></typeAlias>
+		<typeAlias alias="EmpleadoBean" type="org.itskill.bean.EmpleadoBean"></typeAlias>
+	</typeAliases>
+	<mappers>
+		<mapper resource="org/itskill/resources/xml/mapper/usuario-mapper.xml" />
+		<mapper resource="org/itskill/resources/xml/mapper/vista-mapper.xml" />
+		<mapper resource="org/itskill/resources/xml/mapper/vistaHijo-mapper.xml" />
+		<mapper resource="org/itskill/resources/xml/mapper/configuracion-mapper.xml" />
+		<mapper resource="org/itskill/resources/xml/mapper/articulo-mapper.xml" />
+		<mapper resource="org/itskill/resources/xml/mapper/marca-mapper.xml" />
+		<mapper resource="org/itskill/resources/xml/mapper/planContable-mapper.xml" />
+		<mapper
+			resource="org/itskill/resources/xml/mapper/inventarioDocumento-mapper.xml" />
+		<mapper resource="org/itskill/resources/xml/mapper/tipoCambio-mapper.xml" />
+		<mapper resource="org/itskill/resources/xml/mapper/proveedor-mapper.xml" />
+		<mapper resource="org/itskill/resources/xml/mapper/persona-mapper.xml" />
+		<mapper resource="org/itskill/resources/xml/mapper/zona-mapper.xml" />
+		<mapper resource="org/itskill/resources/xml/mapper/cargo-mapper.xml" />
+		<mapper resource="org/itskill/resources/xml/mapper/tipopersona-mapper.xml" />
+		<mapper resource="org/itskill/resources/xml/mapper/almacen-mapper.xml" />
+		<mapper resource="org/itskill/resources/xml/mapper/banco-mapper.xml" />
+		<mapper resource="org/itskill/resources/xml/mapper/igv-mapper.xml" />
+		<mapper resource="org/itskill/resources/xml/mapper/departamento-mapper.xml" />
+		<mapper resource="org/itskill/resources/xml/mapper/provincia-mapper.xml" />
+		<mapper resource="org/itskill/resources/xml/mapper/distrito-mapper.xml" />
+		<mapper resource="org/itskill/resources/xml/mapper/tipoCliente-mapper.xml" />
+		<mapper resource="org/itskill/resources/xml/mapper/cliente-mapper.xml" />
+		<mapper resource="org/itskill/resources/xml/mapper/contacto-mapper.xml" />
+		<mapper resource="org/itskill/resources/xml/mapper/clase-mapper.xml" />
+		<mapper resource="org/itskill/resources/xml/mapper/grupo-mapper.xml" />
+		<mapper resource="org/itskill/resources/xml/mapper/cuenta-mapper.xml" />
+		<mapper resource="org/itskill/resources/xml/mapper/subCuenta-mapper.xml" />
+		<mapper resource="org/itskill/resources/xml/mapper/categoria-mapper.xml" />
+         <mapper resource="org/itskill/resources/xml/mapper/empleado-mapper.xml" />
+	</mappers>
+</configuration>

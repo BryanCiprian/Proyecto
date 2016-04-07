@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.itskill.mapper.InventarioDocumentoMapper">
+
+    
+   <select id="listarTipoMedioPago" resultType="InventarioDocumento">
+        SELECT id_doc_inventario,num_tabla, des_doc, num_doc, tab_padre
+        FROM tbl17_documento_inventario WHERE TAB_PADRE=1 and estado='1' order by 2;        
+    </select>
+    
+     <select id="listarTipoDocumentoIdentidad" resultType="InventarioDocumento">
+        SELECT id_doc_inventario,num_tabla, des_doc, num_doc, tab_padre
+        FROM tbl17_documento_inventario WHERE TAB_PADRE=2 and estado='1' order by 2;      
+    </select>
+    
+     <select id="listarEntidadFinanciera" resultType="InventarioDocumento">
+        SELECT id_doc_inventario,num_tabla, des_doc, num_doc, tab_padre
+        FROM tbl17_documento_inventario WHERE TAB_PADRE=3 and estado='1' order by 2;   
+    </select>
+    
+     <select id="listarTipoMoneda" resultType="InventarioDocumento">
+        SELECT id_doc_inventario,num_tabla, des_doc, num_doc, tab_padre
+        FROM tbl17_documento_inventario WHERE TAB_PADRE=4 and estado='1' order by 2;   
+    </select>
+    
+     <select id="listarTipoExistencia" resultType="InventarioDocumento">
+        SELECT id_doc_inventario,num_tabla, des_doc, num_doc, tab_padre, nom_corto
+        FROM tbl17_documento_inventario WHERE TAB_PADRE=5 and estado='1' order by 2;        
+    </select>
+    
+    <select id="listarTipoExistenciaComercial" resultType="InventarioDocumento">
+        SELECT id_doc_inventario,num_tabla, des_doc, num_doc, tab_padre, nom_corto
+        FROM tbl17_documento_inventario WHERE TAB_PADRE=5 and estado='1' and nom_corto is not null order by 2;        
+    </select>
+    
+     <select id="listarUnidadMedida" resultType="InventarioDocumento">
+        SELECT id_doc_inventario,num_tabla, des_doc, num_doc, tab_padre
+        FROM tbl17_documento_inventario WHERE TAB_PADRE=6 and estado='1' order by 2;  
+    </select>
+    
+     <select id="listarUnidadMedidaComercial" resultType="InventarioDocumento">
+        SELECT id_doc_inventario,num_tabla, des_doc, num_doc, tab_padre,nom_corto
+        FROM tbl17_documento_inventario WHERE TAB_PADRE=6 and estado='1' and nom_corto is not null order by 2;  
+    </select>
+    
+	<select id="listarTipoIntangible" resultType="InventarioDocumento">
+        SELECT id_doc_inventario,num_tabla, des_doc, num_doc, tab_padre
+        FROM tbl17_documento_inventario WHERE TAB_PADRE=7 and estado='1' order by 2;     
+    </select>
+    
+    <select id="listarCodigoLibroRegistro" resultType="InventarioDocumento">
+        SELECT id_doc_inventario,num_tabla, des_doc, num_doc, tab_padre
+        FROM tbl17_documento_inventario WHERE TAB_PADRE=8 and estado='1' order by 2;         
+    </select>
+    
+    <select id="listarCodigoCuentaContable" resultType="InventarioDocumento">
+        SELECT id_doc_inventario,num_tabla, des_doc, num_doc, tab_padre
+        FROM tbl17_documento_inventario WHERE TAB_PADRE=1 and estado='1' order by 2;      
+    </select>
+    
+    <select id="listarTipoComprobantePago" resultType="InventarioDocumento">
+       SELECT id_doc_inventario,num_tabla, des_doc, num_doc, tab_padre
+        FROM tbl17_documento_inventario WHERE TAB_PADRE=10 and estado='1' order by 2;    
+    </select>
+    
+    <select id="listarTipoComprobantePagoComercial" resultType="InventarioDocumento">
+       SELECT id_doc_inventario,num_tabla, des_doc, num_doc, tab_padre,nom_corto
+        FROM tbl17_documento_inventario WHERE TAB_PADRE=10 and estado='1' and nom_corto is not null  order by 2;    
+    </select>
+    
+    <select id="listarCodigoAduana" resultType="InventarioDocumento">
+        SELECT id_doc_inventario,num_tabla, des_doc, num_doc, tab_padre
+        FROM tbl17_documento_inventario WHERE TAB_PADRE=11 and estado='1' order by 2;         
+    </select>
+    
+     <select id="listarTipoOperacion" resultType="InventarioDocumento">
+        SELECT id_doc_inventario,num_tabla, des_doc, num_doc, tab_padre
+        FROM tbl17_documento_inventario WHERE TAB_PADRE=12 and estado='1' order by 2;       
+    </select>
+    
+     <select id="listarDocumentoCompra" resultType="InventarioDocumento">
+  		SELECT id_doc_inventario, nom_corto
+		FROM tbl17_documento_inventario WHERE tab_padre=10 and estado='1' and id_doc_inventario in (215, 213) order by 2;
+    </select>
+    
+</mapper>

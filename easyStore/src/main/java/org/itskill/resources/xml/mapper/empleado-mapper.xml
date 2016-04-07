@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+
+<mapper namespace="org.itskill.mapper.EmpleadoMapper">
+    
+ 
+ <select id="save" resultType="Integer" parameterType="ClienteBean">
+       select spi_tbl06_empleado(#{idPersona},#{cargoBean.idCargo},#{fecInicioContrato}, #{fecFinContrato},'1',#{usuarioBean.var_usuario}); 
+    </select>
+    
+</mapper>

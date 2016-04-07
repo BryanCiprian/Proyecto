@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.itskill.mapper.PlanContableMapper">
+   
+   <resultMap id="ctaMap" type="Cuenta">
+        <id column="idCuenta" property="id_cuenta"></id>
+        <result column="desCuenta" property="des_cuenta"></result>
+        <result column="idEstado" property="id_estado"></result>   
+         <association property="grupo" javaType="Grupo">
+            <id column="idGrupo" property="id_grupo"></id>            
+            <result column="desGrupo" property="des_grupo"></result>
+            
+	            <association property="clase" javaType="Clase">
+	            <id column="idClase" property="id_clase"></id>            
+	            <result column="desClase" property="des_clase"></result>
+	            <result column="naturaleza" property="nat_clase"></result>
+	        	</association>    
+        
+        </association>   
+        <association property="usuarioBean" javaType="Usuario">
+            <id column="id_usuario" property="id_usuario"></id>            
+            <result column="var_usuario" property="var_usuario"></result>
+            <result column="var_clave" property="var_clave"></result>
+        </association>     
+    </resultMap>
+    
+    <select id="save" resultType="Integer" parameterType="Cuenta">       
+        SELECT spi_tbl_plan_cuenta_contable(#{idCuenta} ,#{desCuenta},#{grupo.idGrupo} ,#{grupo.clase.idClase}, 1,#{usuarioBean.var_usuario});        
+    </select>
+    
+    
+    <select id="listarGrupoXclase" resultType="Grupo" parameterType="Integer">
+        SELECT id_grupo as idGrupo, des_grupo as desGrupo
+        FROM tbl24_grupo_plan_contable
+        WHERE id_estado=1 and id_clase=#{clase}  order by 2; 
+        
+
+    </select>
+    
+	 <select id="listarAll" resultType="Cuenta">
+	   select cc.id_cuenta as idCuenta,  
+	   		  cc.id_grupo as grupo.idGrupo, 
+	   		  cc.des_cuenta as desCuenta, 
+	   		  gg.id_clase as grupo.clase.idClase
+		from tbl25_cuenta_plan_contable cc,
+     	tbl24_grupo_plan_contable gg
+     	where
+     	cc.id_grupo=gg.id_grupo
+ 	</select> 
+    
+</mapper>

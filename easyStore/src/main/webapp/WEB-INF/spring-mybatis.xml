@@ -1,0 +1,170 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+	<bean id="sqlSessionFactoryLocal" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSourceLocal" />
+		<property name="configLocation"
+			value="classpath:org/itskill/resources/xml/mybatis-config.xml" />
+	</bean>
+
+
+
+	<bean id="UsuarioMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="org.itskill.mapper.UsuarioMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactoryLocal" />
+	</bean>
+
+
+	<bean id="VistaMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="org.itskill.mapper.VistaMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactoryLocal" />
+	</bean>
+
+
+	<bean id="MenuMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="org.itskill.mapper.MenuMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactoryLocal" />
+
+	</bean>
+
+	<bean id="ConfiguracionMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="org.itskill.mapper.ConfiguracionMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactoryLocal" />
+
+	</bean>
+	<bean id="ArticuloMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="org.itskill.mapper.ArticuloMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactoryLocal" />
+
+	</bean>
+
+	<bean id="TipoCambioMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="org.itskill.mapper.TipoCambioMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactoryLocal" />
+
+	</bean>
+
+	<bean id="MarcaMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="org.itskill.mapper.MarcaMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactoryLocal" />
+
+	</bean>
+
+	<bean id="ProveedorMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="org.itskill.mapper.ProveedorMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactoryLocal" />
+
+	</bean>
+
+	<bean id="ZonaMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="org.itskill.mapper.ZonaMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactoryLocal" />
+
+	</bean>
+	<bean id="CargoMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="org.itskill.mapper.CargoMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactoryLocal" />
+
+	</bean>
+
+	<bean id="TipoPersonaMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="org.itskill.mapper.TipoPersonaMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactoryLocal" />
+
+	</bean>
+
+	<bean id="PersonaMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="org.itskill.mapper.PersonaMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactoryLocal" />
+
+	</bean>
+
+	<bean id="AlmacenMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="org.itskill.mapper.AlmacenMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactoryLocal" />
+	</bean>
+
+	<bean id="BancoMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="org.itskill.mapper.BancoMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactoryLocal" />
+	</bean>
+
+	<bean id="IgvMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="org.itskill.mapper.IgvMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactoryLocal" />
+	</bean>
+
+	<bean id="DepartamentoMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="org.itskill.mapper.DepartamentoMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactoryLocal" />
+
+	</bean>
+
+	<bean id="ProvinciaMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="org.itskill.mapper.ProvinciaMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactoryLocal" />
+	</bean>
+
+	<bean id="DistritoMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="org.itskill.mapper.DistritoMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactoryLocal" />
+	</bean>
+
+	<bean id="TipoClienteMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="org.itskill.mapper.TipoClienteMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactoryLocal" />
+	</bean>
+
+	<bean id="ClienteMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="org.itskill.mapper.ClienteMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactoryLocal" />
+
+	</bean>
+
+	<bean id="ContactoMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="org.itskill.mapper.ContactoMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactoryLocal" />
+
+	</bean>
+
+	<bean id="CategoriaMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="org.itskill.mapper.CategoriaMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactoryLocal" />
+	</bean>
+
+	<bean id="InventarioDocumentoMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="org.itskill.mapper.InventarioDocumentoMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactoryLocal" />
+	</bean>
+
+	<bean id="ClaseMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="org.itskill.mapper.ClaseMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactoryLocal" />
+	</bean>
+
+	<bean id="GrupoMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="org.itskill.mapper.GrupoMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactoryLocal" />
+	</bean>
+
+	<bean id="CuentaMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="org.itskill.mapper.CuentaMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactoryLocal" />
+	</bean>
+
+	<bean id="SubCuentaMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="org.itskill.mapper.SubCuentaMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactoryLocal" />
+	</bean>
+	
+	<bean id="EmpleadoMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="org.itskill.mapper.EmpleadoMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactoryLocal" />
+	</bean>
+	
+	
+
+
+</beans>

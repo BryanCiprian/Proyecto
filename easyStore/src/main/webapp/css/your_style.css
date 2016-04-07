@@ -1,0 +1,1139 @@
+/*
+ * It is advised not to edit the smartadmin_production.css
+ * as this will override any changes you make in the 
+ * later versions of this theme. 
+ * 
+ * We advise that you use use this CSS to override 
+ * SmartAdmin styles. 
+ * 
+ * Rename the stylesheet to whatever your liking so it will stay
+ * unique to you with each update of SmartAdmin.
+ */
+
+/*
+ * INDEX
+ * 
+ * - HTML
+ * - 
+ * - CUSTOM STYLES
+ */
+.btnAgregar {
+	-webkit-box-shadow: 2px 3px 6px 0px rgba(50, 50, 50, 0.5);
+	-moz-box-shadow: 2px 3px 6px 0px rgba(50, 50, 50, 0.5);
+	box-shadow: 2px 3px 6px 0px rgba(50, 50, 50, 0.5);
+}
+
+.btn-registrar {
+	-webkit-box-shadow: 2px 3px 6px 0px rgba(50, 50, 50, 0.5);
+	-moz-box-shadow: 2px 3px 6px 0px rgba(50, 50, 50, 0.5);
+	box-shadow: 2px 3px 6px 0px rgba(50, 50, 50, 0.5);
+}
+
+.btnClose {
+	-webkit-box-shadow: 2px 3px 6px 0px rgba(50, 50, 50, 0.5);
+	-moz-box-shadow: 2px 3px 6px 0px rgba(50, 50, 50, 0.5);
+	box-shadow: 2px 3px 6px 0px rgba(50, 50, 50, 0.5);
+}
+
+/*Material design*/
+
+
+.smart-style-md {
+	background: #edecec;
+	font-family: RobotoDraft, Roboto, sans-serif;
+	-webkit-font-smoothing: antialiased
+}
+
+.smart-style-md .txt-color-green {
+	color: #4CAF50 !important
+}
+
+.smart-style-md .bg-color-greenDark {
+	background: #2E7D32 !important
+}
+
+.smart-style-md .txt-color-greenDark {
+	color: #2E7D32 !important
+}
+
+.smart-style-md .bg-color-greenLight {
+	background: #43A047 !important
+}
+
+.smart-style-md .txt-color-greenLight {
+	color: #43A047 !important
+}
+
+.smart-style-md .bg-color-purple {
+	background: #9C27B0 !important
+}
+
+.smart-style-md .txt-color-purple {
+	color: #9C27B0 !important
+}
+
+.smart-style-md .bg-color-magenta, .smart-style-md .jarviswidget-color-magenta>header
+	{
+	background: #A0F !important
+}
+
+.smart-style-md .jarviswidget-color-magenta>header {
+	border-color: #A0F !important
+}
+
+.smart-style-md .txt-color-magenta, .smart-style-md nav ul li.active>a:before
+	{
+	color: #A0F !important
+}
+
+.smart-style-md .bg-color-pink {
+	background: #E91E63 !important
+}
+
+.smart-style-md .txt-color-pink {
+	color: #E91E63 !important
+}
+
+.smart-style-md .bg-color-pinkDark {
+	background: #AD1457 !important
+}
+
+.smart-style-md .txt-color-pinkDark {
+	color: #AD1457 !important
+}
+
+.smart-style-md .bg-color-blue, .smart-style-md .bootstrap-tagsinput>span,
+	.smart-style-md .onoffswitch-inner:before, .smart-style-md .open>.dropdown-toggle.btn-primary,
+	.smart-style-md .select2-container-multi .select2-choices .select2-search-choice
+	{
+	background: #2196F3 !important
+}
+
+.smart-style-md .txt-color-blue {
+	color: #2196F3 !important
+}
+
+.smart-style-md .bg-color-blueLight, .smart-style-md .label-primary,
+	.smart-style-md .noUi-connect, .smart-style-md .pagination>.active>a,
+	.smart-style-md .pagination>.active>a:focus, .smart-style-md .pagination>.active>a:hover,
+	.smart-style-md .pagination>.active>span, .smart-style-md .pagination>.active>span:focus,
+	.smart-style-md .pagination>.active>span:hover, .smart-style-md .slider-selection
+	{
+	background: #03A9F4 !important
+}
+
+.smart-style-md .btn-primary {
+	background: #2196F3;
+	border-color: #0c7cd5 !important
+}
+
+.smart-style-md .btn-primary:active, .smart-style-md .btn-primary:focus,
+	.smart-style-md .btn-primary:hover {
+	background: #0c7cd5 !important
+}
+
+.smart-style-md .btn-primary.active, .smart-style-md .btn-primary:active,
+	.smart-style-md .btn-primary:hover, .smart-style-md .open>.dropdown-toggle.btn-primary
+	{
+	border-color: #0c7cd5 !important
+}
+
+.smart-style-md .btn-primary.active.focus, .smart-style-md .btn-primary.active:focus,
+	.smart-style-md .btn-primary.active:hover, .smart-style-md .btn-primary:active.focus,
+	.smart-style-md .btn-primary:active:focus, .smart-style-md .btn-primary:active:hover,
+	.smart-style-md .open>.dropdown-toggle.btn-primary.focus, .smart-style-md .open>.dropdown-toggle.btn-primary:focus,
+	.smart-style-md .open>.dropdown-toggle.btn-primary:hover {
+	background: #0c7cd5 !important;
+	border-color: #0c7cd5 !important
+}
+
+.smart-style-md .btn-warning {
+	background: #FF9800;
+	border-color: #cc7a00 !important
+}
+
+.smart-style-md .btn-warning:active, .smart-style-md .btn-warning:focus,
+	.smart-style-md .btn-warning:hover {
+	background: #cc7a00 !important
+}
+
+.smart-style-md .btn-warning.active, .smart-style-md .btn-warning:active,
+	.smart-style-md .btn-warning:hover, .smart-style-md .open>.dropdown-toggle.btn-warning
+	{
+	border-color: #cc7a00 !important
+}
+
+.smart-style-md .btn-warning.active.focus, .smart-style-md .btn-warning.active:focus,
+	.smart-style-md .btn-warning.active:hover, .smart-style-md .btn-warning:active.focus,
+	.smart-style-md .btn-warning:active:focus, .smart-style-md .btn-warning:active:hover,
+	.smart-style-md .open>.dropdown-toggle.btn-warning.focus, .smart-style-md .open>.dropdown-toggle.btn-warning:focus,
+	.smart-style-md .open>.dropdown-toggle.btn-warning:hover {
+	background: #cc7a00 !important;
+	border-color: #cc7a00 !important
+}
+
+.smart-style-md .pagination>li>a, .smart-style-md .pagination>li>span
+	{
+	color: #03A9F4
+}
+
+.smart-style-md .pagination>.active>a, .smart-style-md .pagination>.active>a:focus,
+	.smart-style-md .pagination>.active>a:hover, .smart-style-md .pagination>.active>span,
+	.smart-style-md .pagination>.active>span:focus, .smart-style-md .pagination>.active>span:hover
+	{
+	color: #fff;
+	border-color: #0398db
+}
+
+.smart-style-md .btn-danger {
+	color: #fff;
+	background-color: #F44336;
+	border-color: #f32c1e
+}
+
+.smart-style-md .btn-danger:active, .smart-style-md .btn-danger:focus,
+	.smart-style-md .btn-danger:hover {
+	background-color: #ba160a
+}
+
+.smart-style-md .btn-danger.active, .smart-style-md .btn-danger:active,
+	.smart-style-md .btn-danger:hover, .smart-style-md .open>.dropdown-toggle.btn-warning
+	{
+	border-color: #ea1c0d !important
+}
+
+.smart-style-md .btn-danger.active.focus, .smart-style-md .btn-danger.active:focus,
+	.smart-style-md .btn-danger.active:hover, .smart-style-md .btn-danger:active.focus,
+	.smart-style-md .btn-danger:active:focus, .smart-style-md .btn-danger:active:hover,
+	.smart-style-md .open>.dropdown-toggle.btn-danger.focus, .smart-style-md .open>.dropdown-toggle.btn-danger:focus,
+	.smart-style-md .open>.dropdown-toggle.btn-danger:hover {
+	background: #ea1c0d !important;
+	border-color: #ea1c0d !important
+}
+
+.smart-style-md .label-danger {
+	background-color: #F44336
+}
+
+.smart-style-md .alert-success, .smart-style-md .btn-success {
+	border-color: #388E3C;
+	color: #FFF;
+	background-color: #4CAF50
+}
+
+.smart-style-md .label-success {
+	background-color: #4CAF50
+}
+
+.smart-style-md .btn-success:active, .smart-style-md .btn-success:focus,
+	.smart-style-md .btn-success:hover {
+	background: #3d8b40;
+	border-color: #388E3C
+}
+
+.smart-style-md .btn-success.active.focus, .smart-style-md .btn-success.active:focus,
+	.smart-style-md .btn-success.active:hover, .smart-style-md .btn-success:active.focus,
+	.smart-style-md .btn-success:active:focus, .smart-style-md .btn-success:active:hover,
+	.smart-style-md .open>.dropdown-toggle.btn-success.focus, .smart-style-md .open>.dropdown-toggle.btn-success:focus,
+	.smart-style-md .open>.dropdown-toggle.btn-success:hover {
+	border-color: #388E3C;
+	background: #3d8b40
+}
+
+.smart-style-md .txt-color-blueLight {
+	color: #03A9F4 !important
+}
+
+.smart-style-md .bg-color-blueDark {
+	background: #1565C0 !important
+}
+
+.smart-style-md .alert-info, .smart-style-md .btn-info {
+	border-color: #03A9F4;
+	color: #01579B;
+	background-color: #B3E5FC
+}
+
+.smart-style-md .label-info {
+	background-color: #B3E5FC
+}
+
+.smart-style-md .btn-info.active, .smart-style-md .btn-info:active,
+	.smart-style-md .btn-info:focus, .smart-style-md .btn-info:hover,
+	.smart-style-md .open>.dropdown-toggle.btn-info {
+	background: #82d4fa;
+	border-color: #03A9F4
+}
+
+.smart-style-md .slider-info+.slider-track>.slider-selection {
+	background-color: #B3E5FC
+}
+
+.smart-style-md .txt-color-blueDark {
+	color: #1565C0 !important
+}
+
+.smart-style-md .bg-color-teal {
+	background: #009688 !important
+}
+
+.smart-style-md .txt-color-teal {
+	color: #009688 !important
+}
+
+.smart-style-md .bg-color-yellow, .smart-style-md .slider-warning+.slider-track>.slider-selection
+	{
+	background: #FFEB3B !important
+}
+
+.smart-style-md .alert-warning {
+	border-color: #F9A825;
+	color: #5A4E3F;
+	background-color: #FFEB3B
+}
+
+.smart-style-md .label-warning {
+	background-color: #FFEB3B;
+	color: #333
+}
+
+.smart-style-md .txt-color-yellow {
+	color: #FFEB3B !important
+}
+
+.smart-style-md .bg-color-orange {
+	background: #FF9800 !important
+}
+
+.smart-style-md .txt-color-orange {
+	color: #FF9800 !important
+}
+
+.smart-style-md .bg-color-orangeDark {
+	background: #E65100 !important
+}
+
+.smart-style-md .txt-color-orangeDark {
+	color: #E65100 !important
+}
+
+.smart-style-md .alert-danger, .smart-style-md .bg-color-red, .smart-style-md .slider-danger+.slider-track>.slider-selection
+	{
+	background: #F44336 !important
+}
+
+.smart-style-md .txt-color-red {
+	color: #F44336 !important
+}
+
+.smart-style-md .bg-color-redLight {
+	background: #FF5252 !important
+}
+
+.smart-style-md .alert-danger {
+	border-color: #B71C1C
+}
+
+.smart-style-md .txt-color-redLight {
+	color: #FF5252 !important
+}
+
+.smart-style-md .text-primary {
+	color: #3F51B5 !important
+}
+
+.smart-style-md .text-success {
+	color: #00C853 !important
+}
+
+.smart-style-md .text-danger {
+	color: #C62828 !important
+}
+
+.smart-style-md .text-warning {
+	color: #FF5722 !important
+}
+
+.smart-style-md .text-info {
+	color: #607D8B !important
+}
+
+.smart-style-md .ajax-notifications {
+	background: #D8F4FF
+}
+
+.smart-style-md .ajax-notifications .fa-4x.fa-border {
+	color: #2196F3;
+	border-color: #2196F3
+}
+
+.smart-style-md aside, .smart-style-md nav ul ul {
+	background: #fff
+}
+
+.smart-style-md .nav-tabs>li.active>a {
+	-webkit-box-shadow: 0 2px 0 #E91E63;
+	-moz-box-shadow: 0 2px 0 #E91E63;
+	box-shadow: 0 2px 0 #E91E63;
+	z-index: 10
+}
+
+.smart-style-md #header, .smart-style-md .dropdown-menu>.active>a,
+	.smart-style-md .dropdown-menu>.active>a:focus, .smart-style-md .dropdown-menu>.active>a:hover,
+	.smart-style-md .dropdown-menu>li>a:focus, .smart-style-md .dropdown-menu>li>a:hover
+	{
+	background: #2196F3
+}
+
+.smart-style-md #content {
+	margin-left: 30px;
+	margin-right: 30px;
+	margin-top: 20px
+}
+
+.smart-style-md #content>.row {
+	margin-bottom: 20px
+}
+
+.smart-style-md .page-title {
+	text-transform: uppercase;
+	font-size: 19px;
+	margin-bottom: 0;
+	margin-top: 10px;
+	letter-spacing: normal
+}
+
+.smart-style-md .page-title>.fa {
+	display: none
+}
+
+.smart-style-md .page-footer {
+	background: #455A64
+}
+
+.smart-style-md #updating-chart.txt-color-blue {
+	color: #4d7686 !important
+}
+
+.smart-style-md .ribbon-button-alignment {
+	display: none
+}
+
+.smart-style-md #ribbon {
+	background: rgba(255, 255, 255, .4)
+}
+
+.smart-style-md #logo-group span#activity, .smart-style-md .btn-header>:first-child>a
+	{
+	background: 0 0;
+	border: none;
+	color: #fff;
+	border-radius: 50%
+}
+
+#project-context .smart-style-md>:first-child, .smart-style-md #project-selector,
+	.smart-style-md .header-dropdown-list>li>.dropdown-toggle, .smart-style-md .project-context>:first-child,
+	.smart-style-md .project-selector {
+	color: #fff !important;
+	text-shadow: none
+}
+
+.smart-style-md .open>.dropdown-menu {
+	-webkit-animation-name: none;
+	-moz-animation-name: none;
+	-o-animation-name: none;
+	animation-name: none;
+	-webkit-animation-duration: .4s;
+	-moz-animation-duration: .4s;
+	-o-animation-duration: .4s;
+	animation-duration: .4s;
+	-webkit-animation-fill-mode: none;
+	-moz-animation-fill-mode: none;
+	-o-animation-fill-mode: none;
+	animation-fill-mode: none
+}
+
+.smart-style-md .bootstrap-select .dropdown-menu.dropdown-menu-right,
+	.smart-style-md .bootstrap-select .dropdown-menu.pull-right, .smart-style-md .btn-group .dropdown-menu.dropdown-menu-right,
+	.smart-style-md .btn-group .dropdown-menu.pull-right, .smart-style-md .date-picker .dropdown-menu.dropdown-menu-right,
+	.smart-style-md .date-picker .dropdown-menu.pull-right, .smart-style-md .dropdown .dropdown-menu.dropdown-menu-right,
+	.smart-style-md .dropdown .dropdown-menu.pull-right, .smart-style-md .dropdown-menu.pull-right
+	{
+	-webkit-transform-origin: top right !important;
+	-moz-transform-origin: top right !important;
+	-ms-transform-origin: top right !important;
+	transform-origin: top right !important
+}
+
+.smart-style-md .bootstrap-select .dropdown-menu.dropdown-menu-left,
+	.smart-style-md .bootstrap-select .dropdown-menu.pull-left, .smart-style-md .btn-group .dropdown-menu.dropdown-menu-left,
+	.smart-style-md .btn-group .dropdown-menu.pull-left, .smart-style-md .date-picker .dropdown-menu.dropdown-menu-left,
+	.smart-style-md .date-picker .dropdown-menu.pull-left, .smart-style-md .dropdown .dropdown-menu.dropdown-menu-left,
+	.smart-style-md .dropdown .dropdown-menu.pull-left, .smart-style-md .dropdown-menu.pull-left,
+	.smart-style-md .project-selector+.dropdown-menu {
+	-webkit-transform-origin: top left !important;
+	-moz-transform-origin: top left !important;
+	-ms-transform-origin: top left !important;
+	transform-origin: top left !important
+}
+
+.smart-style-md .btn-group .dropdown-menu, .smart-style-md .date-picker .dropdown-menu,
+	.smart-style-md .dropdown, .smart-style-md .dropdown-menu {
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-ms-transform-origin: top left;
+	transform-origin: top left;
+	-webkit-transition: all;
+	-o-transition: all;
+	transition: all;
+	-webkit-transition-duration: 250ms;
+	transition-duration: 250ms;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transform: scale(0);
+	-ms-transform: scale(0);
+	-o-transform: scale(0);
+	transform: scale(0);
+	opacity: 0;
+	filter: alpha(opacity = 0);
+	display: block
+}
+
+.smart-style-md .project-selector+.dropdown-menu {
+	margin-top: -27px
+}
+
+.smart-style-md .header-dropdown-list .dropdown-menu {
+	margin-top: -20px
+}
+
+.smart-style-md .bootstrap-select.open .dropdown-menu, .smart-style-md .btn-group.open .dropdown-menu,
+	.smart-style-md .dropdown.open .dropdown-menu, .smart-style-md .dropup.open .dropdown-menu,
+	.smart-style-md .open>.dropdown-menu {
+	-webkit-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
+	opacity: 1;
+	filter: alpha(opacity = 100)
+}
+
+.smart-style-md .login-info {
+	height: 120px;
+	background: url(../img/cover.png) no-repeat center center;
+	margin-top: -1px !important;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	border: 0
+}
+
+.smart-style-md .login-info>span {
+	height: 119px;
+	border: 0;
+	padding: 0
+}
+
+.smart-style-md .login-info a {
+	display: block;
+	margin: 0;
+	padding: 10px
+}
+
+.smart-style-md .login-info a span {
+	display: block;
+	background: rgba(0, 0, 0, .2);
+	width: 100%;
+	max-width: 100%;
+	padding: 5px 10px;
+	margin-left: -10px;
+	margin-top: 22px;
+	color: #fff
+}
+
+.smart-style-md .login-info img {
+	border-radius: 50%;
+	width: 50px;
+	border: 3px solid rgba(0, 0, 0, .14);
+	box-sizing: content-box
+}
+
+.smart-style-md #logo img {
+	display: none
+}
+
+.smart-style-md #activity b.badge {
+	padding: 4px
+}
+
+.smart-style-md #logo-group>span#logo:before {
+	content: "SmartAdmin";
+	font-size: 17px;
+	color: #fff;
+	font-weight: 300;
+	margin-top: 1px;
+	display: block
+}
+
+.smart-style-md .header-search>input[type=text] {
+	background: 0 0;
+	border-right-width: 0;
+	border-left-width: 0;
+	border-top-width: 0;
+	border-bottom-color: #fff;
+	color: #fff;
+	padding: 0
+}
+
+.smart-style-md .header-search>button {
+	color: #fff
+}
+
+.smart-style-md .header-search input[type=text]::-webkit-input-placeholder
+	{
+	color: rgba(255, 255, 255, .7)
+}
+
+.smart-style-md .header-search input[type=text]:-moz-placeholder {
+	color: rgba(255, 255, 255, .7)
+}
+
+.smart-style-md .header-search input[type=text]::-moz-placeholder {
+	color: rgba(255, 255, 255, .7)
+}
+
+.smart-style-md .header-search input[type=text]:-ms-input-placeholder
+	{
+	color: rgba(255, 255, 255, .7)
+}
+
+.smart-style-md nav ul li a, .smart-style-md nav ul li.open>a,
+	.smart-style-md nav ul li.open>a b {
+	color: #4C4C4C !important
+}
+
+.smart-style-md nav ul .active .smart-style-md nav ul>a, nav ul li.open .smart-style-md nav ul>a
+	{
+	color: #3C3C3C !important
+}
+
+.smart-style-md nav ul li a:hover, ul li .smart-style-md nav ul>a:hover
+	{
+	background-color: rgba(69, 69, 69, .05)
+}
+
+.smart-style-md nav ul li a {
+	font-size: 13px
+}
+
+.smart-style-md nav>ul>li>a {
+	font-weight: 400;
+	text-transform: uppercase;
+	padding: 14px 10px 14px 11px
+}
+
+.smart-style-md nav>ul>li>a b {
+	margin-top: 6px
+}
+
+.smart-style-md nav ul li a:active {
+	background: 0 0
+}
+
+.smart-style-md .login-info a span+i {
+	display: none
+}
+
+#ribbon .breadcrumb .smart-style-md>.active, .breadcrumb .smart-style-md>li+li:before,
+	.smart-style-md #ribbon .breadcrumb, .smart-style-md #ribbon .breadcrumb a,
+	.smart-style-md #ribbon .breadcrumb li:last-child {
+	color: #374850 !important
+}
+
+#speech-btn .smart-style-md>:first-child .smart-style-md>a+.popover,
+	.smart-style-md .ajax-dropdown {
+	-webkit-box-shadow: 0 0 30px rgba(30, 30, 100, .75);
+	-moz-box-shadow: 0 0 30px rgba(30, 30, 100, .75);
+	box-shadow: 0 0 30px rgba(30, 30, 100, .75)
+}
+
+.smart-style-md nav>ul ul li::before, .smart-style-md nav>ul>li>ul::before
+	{
+	border: none
+}
+
+.smart-style-md .minifyme {
+	background: #2196F3;
+	color: #FFF;
+	position: absolute;
+	width: 29px;
+	border-radius: 50%;
+	z-index: 999;
+	right: -12px;
+	padding: 1px 3px;
+	border-bottom: 1px solid #3D6A8A
+}
+
+.smart-style-md nav li a {
+	position: relative;
+	overflow: hidden
+}
+
+.smart-style-md nav li a:after {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 300px;
+	height: 300px;
+	margin-left: -120px;
+	margin-top: -150px;
+	background: #455A64;
+	border-radius: 100%;
+	opacity: .3;
+	transform: scale(0)
+}
+
+@
+keyframes ripple { 0%{
+	transform: scale(0)
+}
+
+20%{
+transform
+:scale(1)
+}
+100%{
+opacity
+:
+0;transform
+:scale(1)
+}
+}
+.smart-style-md nav li a:not (:active ):after {
+	animation: ripple 1.5s ease-in-out
+}
+
+.smart-style-md nav li a:after {
+	visibility: hidden
+}
+
+.smart-style-md nav li a:focus:after {
+	visibility: visible
+}
+
+.smart-style-md nav li a:active {
+	background-color: transparent !important
+}
+
+.smart-style-md .checkbox label>input[type=checkbox]:after {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 48px;
+	height: 48px;
+	margin-left: -18px;
+	margin-top: -18px;
+	background: #3f51b5;
+	border-radius: 100%;
+	opacity: .6;
+	transform: scale(0)
+}
+
+@
+keyframes rippleDuplicate { 0%{
+	transform: scale(0)
+}
+
+40%{
+transform
+:scale(1)
+}
+100%{
+opacity
+:
+0;transform
+:scale(1)
+}
+}
+.smart-style-md .checkbox label>input[type=checkbox]:focus:after {
+	animation: rippleDuplicate .5s ease-out
+}
+
+.smart-style-md .checkbox label>input[type=checkbox]:checked {
+	animation-name: rippleDuplicate
+}
+
+.smart-style-md .checkbox label>input[type=checkbox]:focus:after {
+	visibility: visible
+}
+
+.smart-style-md .smart-form .checkbox input:focus+i, .smart-style-md .smart-form .input input:focus,
+	.smart-style-md .smart-form .radio input:focus+i, .smart-style-md .smart-form .select select:focus,
+	.smart-style-md .smart-form .textarea textarea:focus, .smart-style-md .smart-form .toggle input:focus+i
+	{
+	border-color: #2196F3
+}
+
+.smart-style-md .smart-form .checkbox input+i:after, .smart-style-md .smart-form .rating input:checked
+	~label{
+	color: #2196F3
+}
+
+.smart-style-md .fieldset[disabled] .form-control, .smart-style-md .form-control[disabled],
+	.smart-style-md .form-control[readonly], .smart-style-md .smart-form .select select,
+	.smart-style-md .smart-form .textarea textarea {
+	border-bottom: 1px dashed #E0E0E0
+}
+
+.smart-style-md .form-control-feedback {
+	width: auto;
+	height: auto
+}
+
+.smart-style-md .smart-form .checkbox input:checked+i, .smart-style-md .smart-form .radio input:checked+i,
+	.smart-style-md .smart-form .toggle input:checked+i {
+	border-color: transparent
+}
+
+.smart-style-md .form-control, .smart-style-md .smart-form .icon-append,
+	.smart-style-md .smart-form .icon-prepend, .smart-style-md .smart-form .input input,
+	.smart-style-md .smart-form .select select, .smart-style-md .smart-form .textarea textarea
+	{
+	border-top-width: 0;
+	border-left-width: 0;
+	border-right-width: 0
+}
+
+.smart-style-md .form-control, .smart-style-md .smart-form .icon-append,
+	.smart-style-md .smart-form .icon-prepend, .smart-style-md .smart-form .select select,
+	.smart-style-md .smart-form .textarea textarea {
+	padding-left: 0
+}
+
+.smart-style-md .form-control:not (.ui-autocomplete-loading ){
+	background: 0 0
+}
+
+.smart-style-md .icon-addon>input[type=text], .smart-style-md .input-icon-left input[type=text].form-control
+	{
+	padding-left: 32px
+}
+
+.smart-style-md input[type=checkbox], .smart-style-md input[type=radio]
+	{
+	margin-top: 2px;
+	line-height: normal
+}
+
+.smart-style-md .dataTables_filter>label:focus .input-group-addon {
+	border-bottom-color: #2196F3
+}
+
+.smart-style-md .dataTables_filter .input-group-addon {
+	border-top-width: 0 !important;
+	border-left-width: 0 !important;
+	border-right-width: 0 !important;
+	background: 0 0
+}
+
+.smart-style-md .dataTables_filter .input-group-addon+.form-control {
+	background: 0 0
+}
+
+.smart-style-md .input-group-addon:first-child, .smart-style-md .input-group-addon:last-child
+	{
+	border: 1px solid inherit
+}
+
+.smart-style-md .input-group .form-control:first-child {
+	border-right: 0 !important
+}
+
+.smart-style-md .input-group-addon+.form-control[type=text] {
+	padding-left: 10px;
+	padding-right: 10px
+}
+
+.smart-style-md .ui-sortable .jarviswidget-sortable>header {
+	box-shadow: none !important
+}
+
+.smart-style-md .jarviswidget>header {
+	border-bottom: 0
+}
+
+.smart-style-md .jarviswidget-ctrls .button-icon, .smart-style-md .widget-toolbar
+	{
+	border: 0
+}
+
+.smart-style-md .widget-toolbar>.color-box {
+	outline: 0 !important;
+	border-radius: 30%;
+	box-shadow: 0 0 1px 1px rgba(56, 56, 56, .3)
+}
+
+.smart-style-md .color-box, .smart-style-md .color-select li span
+	{
+	border-radius: 30%
+}
+
+.smart-style-md .jarviswidget header .nav-tabs>li.active>a, .smart-style-md .jarviswidget header .nav-tabs>li.active>a:focus,
+	.smart-style-md .jarviswidget header .nav-tabs>li.active>a:hover {
+	border: 0 !important
+}
+
+.smart-style-md .jarviswidget-sortable.ui-sortable-helper {
+	box-shadow: 0 19px 38px rgba(0, 0, 0, .3), 0 15px 12px
+		rgba(0, 0, 0, .22)
+}
+
+.smart-style-md .jarviswidget-placeholder {
+	background: linear-gradient(90deg, #00f 50%, transparent 50%),
+		linear-gradient(90deg, #00f 50%, transparent 50%),
+		linear-gradient(0deg, #00f 50%, transparent 50%),
+		linear-gradient(0deg, #00f 50%, transparent 50%);
+	background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+	background-size: 10px 2px, 10px 2px, 2px 10px, 2px 10px;
+	background-position: 0 0, 100% 100%, 0 100%, 100% 0;
+	animation: border-dance 4s infinite linear;
+	width: 100%;
+	height: 100%;
+	padding: 10px
+}
+
+@
+keyframes border-dance { 0%{
+	background-position: 0 0, 300px 116px, 0 150px, 216px 0
+}
+
+100%{
+background-position
+:
+300px
+ 
+0,0
+116
+px
+,
+0
+0,216
+px
+ 
+150
+px
+}
+}
+.smart-style-md .MessageBoxContainer {
+	border-radius: 4px;
+	max-width: 600px;
+	margin: 0 auto;
+	box-shadow: 0 19px 38px rgba(0, 0, 0, .3), 0 15px 12px
+		rgba(0, 0, 0, .22);
+	background: #fff;
+	color: #333
+}
+
+.smart-style-md .table>t>tr>td, .smart-style-md .table>t>tr>th,
+	.smart-style-md .table>tfoot>tr>td, .smart-style-md .table>tfoot>tr>th,
+	.smart-style-md .table>thead>tr>td, .smart-style-md .table>thead>tr>th
+	{
+	padding: 16px 10px
+}
+
+.smart-style-md .dt-toolbar {
+	padding: 14px 20px 11px
+}
+
+.smart-style-md .inbox- .table-wrap, .smart-style-md .inbox-compose-footer,
+	.smart-style-md .inbox-info-bar .form-group input, .smart-style-md .inbox-info-bar .select2-container-multi .select2-choices,
+	.smart-style-md .inbox-nav-bar, .smart-style-md .inbox-side-bar {
+	background: #fff
+}
+
+.smart-style-md .inbox-compose-footer {
+	border-bottom-width: 0;
+	padding-left: 0;
+	padding-right: 0
+}
+
+.smart-style-md .inbox- {
+	box-shadow: -11px 12px 23px rgba(0, 0, 0, .1)
+}
+
+.smart-style-md .inbox-download, .smart-style-md .inbox-message {
+	border-bottom: 0
+}
+
+.smart-style-md .inbox-info-bar .form-group input, .smart-style-md .inbox-info-bar .select2-container-multi .select2-choices
+	{
+	border-color: transparent !important
+}
+
+.smart-style-md #inbox-content {
+	margin-bottom: 30px !important
+}
+
+.smart-style-md.desktop-detected .inbox-compose-footer, .smart-style-md.desktop-detected .inbox-download
+	{
+	padding-bottom: 56px
+}
+
+.smart-style-md ::-webkit-scrollbar {
+	width: 10px;
+	background-color: transparent;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent
+}
+
+.smart-style-md ::-webkit-scrollbar:hover {
+	background-color: rgba(0, 0, 0, .05)
+}
+
+.smart-style-md ::-webkit-scrollbar-thumb:vertical {
+	background: rgba(0, 0, 0, .2);
+	border-radius: 100px;
+	background-clip: padding-box;
+	border: 2px solid transparent;
+	min-height: 10px
+}
+
+.smart-style-md .inbox-message {
+	background: #fff
+}
+
+.smart-style-md .note-editor .note-editable {
+	background-color: rgba(33, 150, 243, .15)
+}
+
+.smart-style-md .note-editor .note-editable:focus {
+	background: #fff
+}
+
+.smart-style-md .inbox-nav-bar {
+	height: auto !important
+}
+
+.smart-style-md .superbox-show {
+	background-color: #37474F
+}
+
+.smart-style-md .superbox-list.active:before {
+	color: #37474F
+}
+
+.smart-style-md .superbox-imageinfo span {
+	color: rgba(255, 255, 255, .5)
+}
+
+.smart-style-md #sparks {
+	display: none
+}
+
+.smart-style-md .page-footer .txt-color-blueLight {
+	color: #fff !important
+}
+
+.smart-style-md.minified .login-info {
+	height: 55px
+}
+
+.smart-style-md.minified .login-info img {
+	width: 34px
+}
+
+.smart-style-md.minified .login-info a {
+	padding: 10px 0
+}
+
+.smart-style-md.minified .login-info a span {
+	display: none
+}
+
+.smart-style-md.minified .minifyme {
+	border-radius: 0;
+	left: 0;
+	width: 45px;
+	border: 0
+}
+
+.smart-style-md.minified nav>ul>li>a>.menu-item-parent, .smart-style-md.minified nav>ul>li>ul
+	{
+	left: 45px
+}
+
+.smart-style-md.minified nav>ul>li>a>.menu-item-parent {
+	padding-top: 4px;
+	top: 0
+}
+
+.smart-style-md.minified nav>ul>li ul li {
+	background: #fff;
+	overflow: hidden
+}
+
+.smart-style-md.minified nav li a {
+	overflow: visible;
+	border: 0
+}
+
+.smart-style-md.minified nav>ul>li {
+	border-bottom: 0 !important;
+	border-top: 0 !important
+}
+
+.smart-style-md.minified nav>ul>li>ul {
+	padding-top: 0;
+	border: 0;
+	background: #f5f5f5;
+	border-left: 1px solid #CACACA
+}
+
+.smart-style-md.menu-on-top aside#left-panel, .smart-style-md.menu-on-top aside#left-panel nav>ul>li
+	{
+	border: 0
+}
+
+.smart-style-md.menu-on-top aside#left-panel nav>ul>li:hover {
+	background: #fff
+}
+
+.smart-style-md.menu-on-top aside#left-panel nav>ul>li:hover>a, .smart-style-md.menu-on-top nav ul li a:hover,
+	.smart-style-md.menu-on-top nav ul ul li a:hover, .smart-style-md.menu-on-top nav ul ul li:hover>a,
+	.smart-style-md.menu-on-top nav ul ul ul li a:hover, .smart-style-md.menu-on-top nav ul>a:hover
+	{
+	color: #fff !important;
+	background-color: #2196F3
+}
+
+@media ( max-width :979px) and (min-width:768px) {
+	.smart-style-md #hide-menu i {
+		color: #fff
+	}
+}
+
+@media ( max-width :767px) {
+	.smart-style-md #content {
+		margin-left: 0;
+		margin-right: 0
+	}
+	.smart-style-md #hide-menu>:first-child>a {
+		width: 40px !important
+	}
+	.smart-style-md #hide-menu i {
+		color: #fff
+	}
+}
+
+@media only screen and (max-width:479px) and (min-width:320px) {
+	.smart-style-md #hide-menu i {
+		color: #fff
+	}
+}
+

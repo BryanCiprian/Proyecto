@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+
+<mapper namespace="org.itskill.mapper.VistaMapper">
+    
+    
+    <resultMap id="vistaMap" type="Vista">
+        <id column="id_vista" property="id_vista"></id>
+        <result column="estado" property="id_estado"></result>
+        <result column="id_padre" property="id_padre"></result>
+        <result column="url_vista" property="var_urlvista"></result>
+        <result column="label_vista" property="var_labelvista"></result>
+        <result column="var_icon" property="var_icon"></result>
+    </resultMap>
+    <select id="getVistasXRol" parameterType="java.lang.Integer" resultMap="vistaMap" >
+	SELECT v.id_vista, v.estado,
+	v.id_padre, v.url_vista, v.label_vista, v.var_icon
+	FROM tbl14_vista v
+	INNER JOIN tbl13_perfil_vista pv ON v.id_vista = pv.id_vista
+	INNER JOIN tbl12_perfil p ON pv.id_perfil = p.id_perfil
+	INNER JOIN tbl11_rol_perfil rp ON p.id_perfil = rp.id_perfil
+	INNER JOIN tbl10_rol r ON rp.id_rol = r.id_rol
+	WHERE v.estado = '1' AND p.estado = '1' AND r.estado = '1'
+	AND r.id_rol = #{rol_id}
+	AND id_padre is null
+    </select>
+</mapper>

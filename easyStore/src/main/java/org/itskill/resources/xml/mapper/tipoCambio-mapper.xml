@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.itskill.mapper.TipoCambioMapper">
+
+	<resultMap id="tcMap" type="TipoCambio">
+		<id column="id_tc" property="id_tc"></id>
+		<result column="fec_tc" property="fec_tc"></result>
+		<result column="val_tc_venta" property="val_tc_venta"></result>
+		<result column="val_tc_compra" property="val_tc_compra"></result>
+
+
+		<result column="fec_crea" property="fec_crea"></result>
+		<result column="fec_eli" property="fec_eli"></result>
+		<result column="fec_mod" property="fec_mod"></result>
+		<result column="estado" property="estado"></result>
+		<association property="usu_crea" javaType="Usuario">
+			<result column="des_usuario" property="var_usuario"></result>
+			<result column="des_clave" property="var_clave"></result>
+		</association>
+		<association property="usu_mod" javaType="Usuario">
+			<id column="id_persona" property="id_persona"></id>
+			<result column="des_usuario" property="var_usuario"></result>
+			<result column="des_clave" property="var_clave"></result>
+		</association>
+		<association property="usu_eli" javaType="Usuario">
+			<id column="id_persona" property="id_persona"></id>
+			<result column="des_usuario" property="var_usuario"></result>
+			<result column="des_clave" property="var_clave"></result>
+		</association>
+
+
+	</resultMap>
+
+	<select id="save" resultType="Integer" parameterType="TipoCambio">
+		SELECT
+		spi_tbl37_tipo_cambio (#{fec_tc} ,
+		#{usu_crea.var_usuario},#{val_tc_venta},#{val_tc_compra});
+	</select>
+	<select id="update" resultType="Integer" parameterType="TipoCambio">
+		SELECT
+		spi_tbl37_tipo_cambio (#{id_tcambio},#{fec_tc} ,
+		#{usuarioBean.id_usuario},#{val_tc_venta},#{val_tc_compra});
+	</select>
+
+	<select id="delete" resultType="Integer" parameterType="TipoCambio">
+		SELECT
+		spi_tbl37_tipo_cambio (#{id_tcambio} ,#{id_usuario});
+	</select>
+
+	<select id="verificarTC" resultType="Integer">
+		SELECT COUNT(*) AS CANTIDAD
+		FROM tbl37_tipo_cambio WHERE fec_crea=(select
+		current_date);
+	</select>
+	<select id="obtenerTC" resultType="Double">
+		SELECT val_tc_compra FROM
+		tbl37_tipo_cambio WHERE fec_crea=(select current_date);
+	</select>
+	<select id="getAll" resultType="TipoCambio">
+		select * from tbl37_tipo_cambio;
+	</select>
+
+</mapper>

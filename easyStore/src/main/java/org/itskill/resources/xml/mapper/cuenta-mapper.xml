@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="org.itskill.mapper.CuentaMapper">
+
+
+
+	<resultMap id="cuentaMap" type="Cuenta">
+		<id column="id_cuenta" property="id_cuenta"></id>
+		<result column="des_cuenta" property="des_cuenta"></result>
+		<result column="nat_cuenta" property="nat_cuenta"></result>
+
+		<result column="fec_crea" property="fec_crea"></result>
+		<result column="fec_eli" property="fec_eli"></result>
+		<result column="fec_mod" property="fec_mod"></result>
+		<result column="estado" property="estado"></result>
+		<association property="usu_crea" javaType="Usuario">
+			<id column="id_persona" property="id_persona"></id>
+			<result column="des_usuario" property="var_usuario"></result>
+			<result column="des_clave" property="var_clave"></result>
+		</association>
+		<association property="usu_mod" javaType="Usuario">
+			<id column="id_persona" property="id_persona"></id>
+			<result column="des_usuario" property="var_usuario"></result>
+			<result column="des_clave" property="var_clave"></result>
+		</association>
+		<association property="usu_eli" javaType="Usuario">
+			<id column="id_persona" property="id_persona"></id>
+			<result column="des_usuario" property="var_usuario"></result>
+			<result column="des_clave" property="var_clave"></result>
+		</association>
+
+		<association property="grupo" javaType="Grupo">
+			<id column="id_grupo" property="id_grupo"></id>
+			<result column="des_grupo" property="des_grupo"></result>
+			<result column="nat_grupo" property="nat_grupo"></result>
+		</association>
+	</resultMap>
+	<select id="getAllByGrupo" resultMap="cuentaMap" parameterType="Integer">
+		select * from
+		tbl22_cuenta_plan_contable where
+		id_grupo=#{grupo.id_grupo};
+	</select>
+</mapper>

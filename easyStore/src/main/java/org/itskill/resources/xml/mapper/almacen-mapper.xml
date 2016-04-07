@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.itskill.mapper.AlmacenMapper">
+
+    <select id="listarAll" resultType="AlmacenBean">
+	    SELECT id_almacen as idAlmacen, nom_almacen as nomAlmacen ,dir_almacen as dirAlmacen 
+        FROM tbl29_almacen where estado='1' order by 2;
+ 	</select>
+ 	 
+    <select id="save" resultType="Integer" parameterType="AlmacenBean">       
+        SELECT spi_tbl29_almacen (#{nomAlmacen} , #{dirAlmacen} ,  1);        
+    </select>
+    
+    <select id="delete" resultType="Integer" parameterType="AlmacenBean">       
+          SELECT spd_tbl29_almacen (#{idAlmacen});     
+    </select>	
+    
+    <select id="update" resultType="Integer" parameterType="AlmacenBean">       
+          SELECT spu_tbl29_almacen (#{idAlmacen} ,#{nomAlmacen} , #{dirAlmacen} );      
+    </select>
+    <select id="listxid" resultType="AlmacenBean" parameterType="AlmacenBean">       
+    SELECT id_almacen as idAlmacen, nom_almacen as nomAlmacen ,dir_almacen as dirAlmacen 
+        FROM tbl29_almacen where id_almacen= #{idAlmacen};
+       
+    </select>
+    
+</mapper>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.itskill.mapper.IgvMapper">
+
+	<resultMap id="IgvMap" type="Igv">
+		<result property="id_igv" column="id_igv" />
+		<result property="val_igv" column="val_igv" />
+		<result property="anno_vigencia" column="anno_vigencia" />
+		<result property="fec_crea" column="fec_crea" />
+		<result property="fec_mod" column="fec_mod" />
+		<result property="fec_eli" column="fec_eli" />
+		<result property="id_estado" column="estado" />
+		<association property="usu_crea" javaType="Usuario">
+			<id column="id_persona" property="id_persona"></id>
+			<result column="var_usuario" property="var_usuario"></result>
+			<result column="var_clave" property="var_clave"></result>
+		</association>
+		<association property="usu_mod" javaType="Usuario">
+			<id column="id_persona" property="id_persona"></id>
+			<result column="var_usuario" property="var_usuario"></result>
+			<result column="var_clave" property="var_clave"></result>
+		</association>
+		<association property="usu_eli" javaType="Usuario">
+			<id column="id_persona" property="id_persona"></id>
+			<result column="des_usuario" property="var_usuario"></result>
+			<result column="des_clave" property="var_clave"></result>
+		</association>
+	</resultMap>
+
+	<select id="getAll" resultMap="IgvMap">
+		select * from tbl32_igv where estado='1';
+	</select>
+
+	<select id="delete" parameterType="Igv" resultType="Integer">
+		select
+		spd_tbl32_igv(#{id_igv},#{usu_eli.var_usuario});
+	</select>
+	<select id="save" resultType="Integer" parameterType="Igv">
+		select
+		spi_tbl32_igv(#{val_igv},#{usu_crea.var_usuario},#{anno_vigencia})
+	</select>
+	<select id="edit" resultType="Integer" parameterType="Igv">
+		select
+		spu_tbl32_igv(#{id_igv},#{val_igv},#{usu_mod.var_usuario},#{anno_vigencia})
+	</select>
+
+	<select id="findById" parameterType="Integer" resultMap="IgvMap">
+		select *
+		from tbl32_igv
+		where id_igv=#{id_igv};
+	</select>
+
+
+</mapper>

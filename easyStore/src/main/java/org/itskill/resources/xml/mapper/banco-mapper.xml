@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.itskill.mapper.BancoMapper">
+
+	<resultMap id="BancoMap" type="Banco">
+		<result property="id_banco" column="id_banco" />
+		<result property="desc_banco" column="desc_banco" />
+		<result property="rep_banco" column="rep_banco" />
+		<result property="ruc_banco" column="ruc_banco" />
+		<result property="fec_crea" column="fec_crea" />
+		<result property="fec_eli" column="fec_eli" />
+
+		<result property="id_estado" column="id_estado" />
+		<result property="fec_eli" column="fec_eli" />
+		<result property="fec_mod" column="fec_mod" />
+
+
+		<association property="usu_crea" javaType="Usuario">
+			<id column="id_usuario" property="id_usuario"></id>
+			<result column="var_usuario" property="var_usuario"></result>
+			<result column="var_clave" property="var_clave"></result>
+		</association>
+		<association property="persona" javaType="PersonaBean">
+			<id column="id_persona" property="id_persona"></id>
+			<result column="ape_paterno" property="ape_paterno"></result>
+			<result column="ape_materno" property="ape_materno"></result>
+			<result column="des_nombre" property="des_nombre"></result>
+		</association>
+		<association property="usu_mod" javaType="Usuario">
+			<id column="id_usuario" property="id_usuario"></id>
+			<result column="var_usuario" property="var_usuario"></result>
+			<result column="var_clave" property="var_clave"></result>
+		</association>
+		<association property="usu_eli" javaType="Usuario">
+			<id column="id_usuario" property="id_usuario"></id>
+			<result column="var_usuario" property="var_usuario"></result>
+			<result column="var_clave" property="var_clave"></result>
+		</association>
+
+
+	</resultMap>
+
+	<select id="getAll" resultMap="BancoMap">
+		select b.*,
+		p.ape_paterno,p.ape_materno,p.des_nombre from tbl29_banco b
+		inner join
+		tbl03_persona p on b.id_persona=p.id_persona ;
+	</select>
+
+	<select id="delete" parameterType="Banco">
+		select
+		spd_tbl29_banco(#{id_banco},#{var_usuario});
+	</select>
+
+	<select id="save" resultType="Integer" parameterType="Banco">
+		select
+		spi_tbl29_banco(#{desc_banco},#{rep_banco},#{ruc_banco},#{id_persona},#{var_usuario},#{idestado})
+	</select>
+	<select id="edit" resultType="Integer" parameterType="Banco">
+		select
+		spi_tbl29_banco(#{id_banco},#{desc_banco},#{rep_banco},#{ruc_banco},#{id_persona},#{var_usuario},#{idestado})
+	</select>
+
+	<select id="findById" parameterType="Integer" resultMap="BancoMap">
+		select b.*,
+		p.ape_paterno,p.ape_materno,p.des_nombre from tbl29_banco b
+		inner
+		join
+		tbl03_persona p on b.id_persona=p.id_persona where
+		b.id_banco=#{id_banco};
+	</select>
+
+
+</mapper>

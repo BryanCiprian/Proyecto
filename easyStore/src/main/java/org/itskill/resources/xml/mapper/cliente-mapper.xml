@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+
+<mapper namespace="org.itskill.mapper.ClienteMapper">
+    
+ 
+ <select id="save" resultType="Integer" parameterType="ClienteBean">
+       select spi_tbl04_cliente( #{idPersona},  #{tipoClienteBean.idTipoCliente},  #{desRuc},  #{nomCom}, #{usuarioBean.var_usuario}, '1');
+    </select>
+    
+</mapper>
+  
